@@ -1,0 +1,16 @@
+[
+  { "name": "TypeScript", "icon": "devicon-typescript-plain colored" },
+  { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+  { "name": "Python", "icon": "devicon-python-plain colored" },
+  { "name": "PHP", "icon": "devicon-php-plain colored" },
+  { "name": "Java", "icon": "devicon-java-plain colored" },
+  { "name": "Next.js", "icon": "devicon-nextjs-plain" },
+  { "name": "NestJS", "icon": "devicon-nestjs-plain colored" },
+  { "name": "Express.js", "icon": "devicon-express-original" },
+  { "name": "Laravel", "icon": "devicon-laravel-plain colored" },
+  { "name": "Flask", "icon": "devicon-flask-original" },
+  { "name": "AWS", "icon": "devicon-amazonwebservices-plain colored" },
+  { "name": "Proxmox", "icon": "devicon-proxmox-original colored" },
+  { "name": "SQL", "icon": "devicon-mysql-plain colored" },
+  { "name": "NoSQL", "icon": "devicon-mongodb-plain colored" }
+]
