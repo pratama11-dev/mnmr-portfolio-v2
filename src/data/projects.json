@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "pulau-intan-lestari-modules",
+    "title": "Pulau Intan Lestari Modules",
+    "description": "Workflow optimizations improving efficiency and UX.",
+    "coverImage": "/projects/pil-cover.jpg",
+    "tags": ["Next.js", "NestJS", "TypeScript"],
+    "links": { "demo": "", "repo": "" }
+  },
+  {
+    "slug": "radar-banjarmasin-digital",
+    "title": "Radar Banjarmasin Digital",
+    "description": "Enhancements that increased user engagement.",
+    "coverImage": "/projects/radar-cover.jpg",
+    "tags": ["Next.js", "Node", "TypeScript"],
+    "links": { "demo": "", "repo": "" }
+  }
+]
