@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import projects from "@/data/projects.json";
 import skills from "@/data/skills.json";
+import { ProjectCard } from "@/components/project-card";
+import { SkillsGrid } from "@/components/skills-grid";
 
 export default function Home() {
   return (
@@ -62,16 +62,7 @@ export default function Home() {
         <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {projects.slice(0, 2).map((p) => (
-            <Link key={p.slug} href={`/projects/${p.slug}`} className="group">
-              <Card className="transition-colors hover:border-foreground/30">
-                <CardHeader>
-                  <CardTitle className="text-base group-hover:underline underline-offset-4">
-                    {p.title}
-                  </CardTitle>
-                  <CardDescription>{p.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            </Link>
+            <ProjectCard key={p.slug} slug={p.slug} title={p.title} description={p.description} />
           ))}
         </div>
       </section>
@@ -79,14 +70,7 @@ export default function Home() {
       <section id="skills" className="mt-16 sm:mt-20">
         <h2 className="text-2xl font-semibold">Skills</h2>
         <p className="mt-3 text-muted-foreground">A snapshot of my core technologies.</p>
-        <ul className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {skills.map((s) => (
-            <li key={s.name} className="flex items-center gap-2 rounded-md border border-border px-3 py-2 bg-card">
-              <i className={`${s.icon} text-xl`} aria-hidden />
-              <span className="text-sm">{s.name}</span>
-            </li>
-          ))}
-        </ul>
+        <SkillsGrid skills={skills} />
       </section>
 
       <section id="certifications" className="mt-16 sm:mt-20">

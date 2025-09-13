@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider
           attribute="class"
@@ -51,27 +52,27 @@ export default function RootLayout({
         >
           <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="mx-auto max-w-5xl px-6 sm:px-8 h-14 flex items-center justify-between">
-              <a href="/" className="font-semibold tracking-tight">
+              <Link href="/" className="font-semibold tracking-tight">
                 Muhammad Nabil Muyassar Rahman
-              </a>
+              </Link>
               <div className="flex items-center gap-3">
                 {/* Desktop nav */}
                 <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
-                  <a href="#about" className="hover:text-foreground">
+                  <Link href="/#about" className="hover:text-foreground">
                     About
-                  </a>
-                  <a href="/projects" className="hover:text-foreground">
+                  </Link>
+                  <Link href="/projects" className="hover:text-foreground">
                     Projects
-                  </a>
-                  <a href="#skills" className="hover:text-foreground">
+                  </Link>
+                  <Link href="/#skills" className="hover:text-foreground">
                     Skills
-                  </a>
-                  <a href="#certifications" className="hover:text-foreground">
+                  </Link>
+                  <Link href="/#certifications" className="hover:text-foreground">
                     Certifications
-                  </a>
-                  <a href="#contact" className="hover:text-foreground">
+                  </Link>
+                  <Link href="/#contact" className="hover:text-foreground">
                     Contact
-                  </a>
+                  </Link>
                 </nav>
                 <a
                   href="https://drive.google.com/file/d/11LhF-dvd_QRYAKMq8pYxolfORS5cydGk/view?usp=drive_link"
@@ -88,36 +89,36 @@ export default function RootLayout({
                     Menu
                   </summary>
                   <div className="absolute right-0 mt-2 w-44 rounded-md border border-border bg-background p-2 shadow-sm">
-                    <a
-                      href="#about"
+                    <Link
+                      href="/#about"
                       className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       About
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="/projects"
                       className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       Projects
-                    </a>
-                    <a
-                      href="#skills"
+                    </Link>
+                    <Link
+                      href="/#skills"
                       className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       Skills
-                    </a>
-                    <a
-                      href="#certifications"
+                    </Link>
+                    <Link
+                      href="/#certifications"
                       className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       Certifications
-                    </a>
-                    <a
-                      href="#contact"
+                    </Link>
+                    <Link
+                      href="/#contact"
                       className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       Contact
-                    </a>
+                    </Link>
                     <a
                       href="https://drive.google.com/file/d/11LhF-dvd_QRYAKMq8pYxolfORS5cydGk/view?usp=drive_link"
                       target="_blank"
@@ -131,8 +132,8 @@ export default function RootLayout({
               </div>
             </div>
           </header>
-          <div className="mx-auto max-w-5xl px-6 sm:px-8 py-12">{children}</div>
-          <footer className="mt-20 border-t border-border/80">
+          <main className="mx-auto max-w-5xl px-6 sm:px-8 py-12 flex-1">{children}</main>
+          <footer className="mt-auto border-t border-border/80">
             <div className="mx-auto max-w-5xl px-6 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
               <p>
                 {" "}
