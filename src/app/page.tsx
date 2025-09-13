@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
