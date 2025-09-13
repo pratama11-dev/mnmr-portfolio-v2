@@ -4,9 +4,9 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import { Badge } from "@/components/ui/badge";
 
 export interface ProjectCardProps {
-  slug: string;
-  title: string;
-  description: string;
+  slug?: string;
+  title?: string;
+  description?: string;
   image?: string | null;
   tags?: string[];
   variant?: "default" | "listing";
@@ -24,7 +24,7 @@ export function ProjectCard({ slug, title, description, image, tags, variant = "
           {image ? (
             <Image
               src={image}
-              alt={title}
+              alt={title ?? ""}
               fill
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
@@ -37,14 +37,14 @@ export function ProjectCard({ slug, title, description, image, tags, variant = "
         {/* Body */}
         <CardHeader>
           <CardTitle className="text-base">
-            <span className="group-hover:underline underline-offset-4">{title}</span>
+            <span className="group-hover:underline underline-offset-4">{title ?? ""}</span>
           </CardTitle>
           <CardDescription className="mt-1">
-            {description}
+            {description ?? ""}
           </CardDescription>
           {showTags ? (
             <div className="mt-3 flex flex-wrap gap-2">
-              {tags!.slice(0, 4).map((t) => (
+              {tags?.slice(0, 4).map((t) => (
                 <Badge key={t} variant="secondary" className="text-xs">
                   {t}
                 </Badge>
