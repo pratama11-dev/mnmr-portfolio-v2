@@ -61,8 +61,14 @@ export default function Home() {
         </div>
         <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {projects.slice(0, 2).map((p) => (
-            <ProjectCard key={p.slug} slug={p.slug} title={p.title} description={p.description} />
+          {projects.slice(0, 2).map((p: any) => (
+            <ProjectCard
+              key={p.slug}
+              slug={p.slug}
+              title={p.title}
+              description={p.description}
+              image={p.images?.[0] ?? p.coverImage ?? null}
+            />
           ))}
         </div>
       </section>
