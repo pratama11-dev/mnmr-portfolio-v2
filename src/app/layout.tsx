@@ -132,7 +132,7 @@ export default function RootLayout({
               </div>
             </div>
           </header>
-          <main className="mx-auto max-w-5xl px-6 sm:px-8 py-12 flex-1">{children}</main>
+          <main>{children}</main>
           <footer className="mt-auto border-t border-border/80">
             <div className="mx-auto max-w-5xl px-6 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
               <p>
