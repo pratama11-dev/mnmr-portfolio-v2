@@ -5,7 +5,9 @@ import projects from "@/data/projects.json";
 import skills from "@/data/skills.json";
 import { ProjectCard } from "@/components/project-card";
 import { SkillsGrid } from "@/components/skills-grid";
-import { IProject } from "@/types";
+import { Project } from "@/types";
+
+const allProjects = projects as Project[];
 
 export default function Home() {
   return (
@@ -61,13 +63,14 @@ export default function Home() {
         </div>
         <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {projects.slice(0, 2).map((p: IProject) => (
+          {allProjects.slice(0, 2).map((p) => (
             <ProjectCard
               key={p.slug}
               slug={p.slug}
               title={p.title}
-              description={p.description}
+              description={p.summary ?? p.description ?? ""}
               image={p.images?.[0] ?? p.coverImage ?? null}
+              variant="listing"
             />
           ))}
         </div>
