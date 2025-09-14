@@ -36,10 +36,19 @@ export interface Project {
 }
 
 export interface ISkillGroup {
-    [key: string]: ISkill[];
+  [key: string]: ISkill[];
 }
 
 export interface ISkill {
-    name?: string;
-    icon?: string;
+  name?: string;
+  icon?: string;
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  issueDate?: string; // e.g., "2024-09" or free text
+  credentialId?: string;
+  credentialUrl?: string;
+  skills?: string[];
 }
