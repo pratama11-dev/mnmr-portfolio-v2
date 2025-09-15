@@ -109,7 +109,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
           )}
         </div>
         <aside className="md:col-span-1 space-y-4">
-          <ProjectMeta items={metaItems as any} />
+          <ProjectMeta items={metaItems} />
           {/* Quick CTA buttons from links */}
           {normalizeLinks(project.links).length ? (
             <div className="flex flex-wrap gap-2">

@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowUp, Space } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
