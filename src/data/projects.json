@@ -2,11 +2,7 @@
   {
     "slug": "pulau-intan-lestari-modules",
     "title": "Pulau Intan Lestari Modules",
-    "images": [
-      "/projects/pil-1.jpg",
-      "/projects/pil-2.jpg",
-      "/projects/pil-3.jpg"
-    ],
+    "images": [],
     "summary": "Workflow optimizations across modules that improved efficiency and UX for internal teams.",
     "links": [
       { "label": "Live Demo", "href": "https://example.com/demo" },

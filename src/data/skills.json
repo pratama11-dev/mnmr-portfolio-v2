@@ -27,7 +27,10 @@
     { "name": "DND Kit" },
     { "name": "Ionic Framework", "icon": "devicon-ionic-original colored" },
     { "name": "Ionic Capacitor" },
-    { "name": "Sunmi Scanner SDK" }
+    { "name": "Sunmi Scanner SDK" },
+    { "name": "Angular", "icon": "devicon-angularjs-plain colored" },
+    { "name": "Shadcn UI" },
+    { "name": "Hero UI" }
   ],
   "Backend": [
     { "name": "Node.js", "icon": "devicon-nodejs-plain colored" },
@@ -35,7 +38,8 @@
     { "name": "Express", "icon": "devicon-express-original" },
     { "name": "Laravel", "icon": "devicon-laravel-plain colored" },
     { "name": "CodeIgniter" },
-    { "name": "SQL", "icon": "devicon-mysql-plain colored" },
+    { "name": "MySQL", "icon": "devicon-mysql-plain colored" },
+    { "name": "MSSQL", "icon": "devicon-microsoftsqlserver-plain colored" },
     { "name": "Amazon RDS" },
     { "name": "DynamoDB" },
     { "name": "MongoDB", "icon": "devicon-mongodb-plain colored" },
