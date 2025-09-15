@@ -25,7 +25,7 @@ export default function Home() {
     <main className="max-w-3xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
       {/* Hero */}
       <section className="text-center sm:text-left">
-        <p className="text-sm text-muted-foreground">Portfolio</p>
+        <p className="text-sm text-muted-foreground">Software Engineer</p>
         <h1 className="mt-2 text-4xl/tight sm:text-5xl/tight font-bold tracking-tight">
           <span className="opacity-80">Hi, I’m</span>{" "}
           <span className="underline decoration-border decoration-2 underline-offset-4">Muhammad Nabil Muyassar Rahman</span>
