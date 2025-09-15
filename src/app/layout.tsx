@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowUp } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +44,7 @@ export default function RootLayout({
         />
       </head>
       <body
+        id="top"
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider
@@ -136,13 +139,20 @@ export default function RootLayout({
           <footer className="mt-auto border-t border-border/80">
             <div className="mx-auto max-w-5xl px-6 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
               <p>
-                {" "}
                 {new Date().getFullYear()} Muhammad Nabil Muyassar Rahman. All
                 rights reserved.
               </p>
-              <a href="#" className="hover:text-foreground">
-                Back to top ↑
-              </a>
+              <Link href="#top" className="hover:no-underline">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="inline-flex items-center cursor-pointer"
+                  aria-label="Back to top"
+                >
+                  <ArrowUp className="mr-2 h-4 w-4" />
+                  Back to top
+                </Button>
+              </Link>
             </div>
           </footer>
         </ThemeProvider>

@@ -3,9 +3,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import projects from "@/data/projects.json";
 import skills from "@/data/skills.json";
+import certs from "@/data/certifications.json";
 import { ProjectCard } from "@/components/project-card";
 import { SkillsGrid } from "@/components/skills-grid";
-import { IProject } from "@/types";
+import { CertificationsList } from "@/components/certifications-list";
+import type { Project, Certification } from "@/types";
+
+const allProjects = projects as Project[];
+const certifications = certs as Certification[];
 
 export default function Home() {
   return (
@@ -61,13 +66,14 @@ export default function Home() {
         </div>
         <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {projects.slice(0, 2).map((p: IProject) => (
+          {allProjects.slice(0, 2).map((p) => (
             <ProjectCard
               key={p.slug}
               slug={p.slug}
               title={p.title}
-              description={p.description}
+              description={p.summary ?? p.description ?? ""}
               image={p.images?.[0] ?? p.coverImage ?? null}
+              variant="listing"
             />
           ))}
         </div>
@@ -81,10 +87,8 @@ export default function Home() {
 
       <section id="certifications" className="mt-16 sm:mt-20">
         <h2 className="text-2xl font-semibold">Certifications</h2>
-        <p className="mt-3 text-muted-foreground">Highlights of certifications (add details later).</p>
-        <ul className="mt-4 space-y-2 text-sm text-muted-foreground list-disc pl-5">
-          <li>Coming soon — add your certifications here.</li>
-        </ul>
+        <p className="mt-3 text-muted-foreground">Highlights of certifications.</p>
+        <CertificationsList items={certifications} />
       </section>
 
       <section id="contact" className="mt-16 sm:mt-20">

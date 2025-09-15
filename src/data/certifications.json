@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "issueDate": "2024-08",
+    "credentialUrl": "https://example.com/cert/aws-ccp",
+    "skills": ["AWS", "Cloud", "Security"]
+  },
+  {
+    "name": "Meta Front-End Developer",
+    "issuer": "Meta",
+    "issueDate": "2023-11",
+    "credentialId": "META-FE-123456",
+    "skills": ["React", "JavaScript", "CSS"]
+  }
+]

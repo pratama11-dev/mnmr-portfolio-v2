@@ -2,17 +2,48 @@
   {
     "slug": "pulau-intan-lestari-modules",
     "title": "Pulau Intan Lestari Modules",
-    "description": "Workflow optimizations improving efficiency and UX.",
-    "coverImage": "/projects/pil-cover.jpg",
-    "tags": ["Next.js", "NestJS", "TypeScript"],
-    "links": { "demo": "", "repo": "" }
-  },
-  {
-    "slug": "radar-banjarmasin-digital",
-    "title": "Radar Banjarmasin Digital",
-    "description": "Enhancements that increased user engagement.",
-    "coverImage": "/projects/radar-cover.jpg",
-    "tags": ["Next.js", "Node", "TypeScript"],
-    "links": { "demo": "", "repo": "" }
+    "images": [
+      "/projects/pil-1.jpg",
+      "/projects/pil-2.jpg",
+      "/projects/pil-3.jpg"
+    ],
+    "summary": "Workflow optimizations across modules that improved efficiency and UX for internal teams.",
+    "links": [
+      { "label": "Live Demo", "href": "https://example.com/demo" },
+      { "label": "Repository", "href": "https://github.com/org/repo" }
+    ],
+    "meta": {
+      "role": "Full‑Stack Developer",
+      "company": "Pulau Intan Lestari",
+      "period": "2024 — 2025",
+      "team": "3 engineers, 1 designer, 1 PM",
+      "location": "Jakarta, Indonesia",
+      "tech": ["Next.js", "NestJS", "TypeScript", "PostgreSQL"],
+      "tools": ["Prisma", "Bull", "React Query", "Tailwind", "AWS"]
+    },
+    "sections": [
+      {
+        "title": "Context",
+        "paragraphs": [
+          "The operations team needed faster internal workflows spanning inventory, orders, and reporting."
+        ]
+      },
+      {
+        "title": "Responsibilities",
+        "bullets": [
+          "Architected module boundaries and API contracts across services.",
+          "Led the frontend build in Next.js with SSR for key workflows.",
+          "Introduced job queues (Bull) for long‑running tasks."
+        ]
+      },
+      {
+        "title": "Outcomes",
+        "bullets": [
+          "Reduced task completion time by ~35%.",
+          "Improved perceived performance (TTI -30%).",
+          "Raised internal adoption across departments."
+        ]
+      }
+    ]
   }
 ]
