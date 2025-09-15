@@ -1,16 +1,82 @@
-[
+[ 
   {
-    "name": "AWS Certified Cloud Practitioner",
-    "issuer": "Amazon Web Services",
-    "issueDate": "2024-08",
-    "credentialUrl": "https://example.com/cert/aws-ccp",
-    "skills": ["AWS", "Cloud", "Security"]
+    "name": "React (Basic) Certificate",
+    "issuer": "HackerRank",
+    "issueDate": "2025-09",
+    "credentialId": "32b1e9bae972",
+    "credentialUrl": "https://www.hackerrank.com/certificates/iframe/32b1e9bae972",
+    "skills": ["React", "TypeScript"]
   },
   {
-    "name": "Meta Front-End Developer",
-    "issuer": "Meta",
-    "issueDate": "2023-11",
-    "credentialId": "META-FE-123456",
-    "skills": ["React", "JavaScript", "CSS"]
+    "name": "JavaScript (Basic) Certificate",
+    "issuer": "HackerRank",
+    "issueDate": "2025-08",
+    "credentialId": "fd61d1fd1e9c",
+    "credentialUrl": "https://www.hackerrank.com/certificates/iframe/fd61d1fd1e9c",
+    "skills": ["JavaScript", "TypeScript"]
+  },
+  {
+    "name": "Problem Solving (Basic) Certificate",
+    "issuer": "HackerRank",
+    "issueDate": "2025-08",
+    "credentialId": "2f65c06eeeea",
+    "credentialUrl": "https://www.hackerrank.com/certificates/iframe/2f65c06eeeea",
+    "skills": ["Problem Solving", "JavaScript", "TypeScript"]
+  },
+  {
+    "name": "SQL (Advanced) Certificate",
+    "issuer": "HackerRank",
+    "issueDate": "2025-08",
+    "credentialId": "9bcd02e7d379",
+    "credentialUrl": "https://www.hackerrank.com/certificates/iframe/9bcd02e7d379",
+    "skills": ["SQL", "MySQL", "MSSQL"]
+  },
+  {
+    "name": "SQL (Intermediate) Certificate",
+    "issuer": "HackerRank",
+    "issueDate": "2025-08",
+    "credentialId": "7c359951302a",
+    "credentialUrl": "https://www.hackerrank.com/certificates/iframe/7c359951302a",
+    "skills": ["SQL", "MySQL", "MSSQL"]
+  },
+  {
+    "name": "SQL (Basic) Certificate",
+    "issuer": "HackerRank",
+    "issueDate": "2025-08",
+    "credentialId": "3e14aab624fa",
+    "credentialUrl": "https://www.hackerrank.com/certificates/iframe/3e14aab624fa",
+    "skills": ["SQL", "MySQL", "MSSQL"]
+  },
+  {
+    "name": "Program Web Development + React Bootcamp Fresh Graduate Academy",
+    "issuer": "Digital Talent Scholarship",
+    "issueDate": "2024-10",
+    "credentialId": "1959095840-51/FGA/BLSDM.Kominfo/2024",
+    "credentialUrl": "https://digitalent.komdigi.go.id/cek-sertifikat",
+    "skills": ["React", "React Native", "Vercel", "JavaScript", "TypeScript", "Github", "Git", "Tailwind CSS", "Bootstrap", "DaisyUI", "Redux", "RTK Query", "React Query"]
+  },
+  {
+    "name": "Back End Development and APIs",
+    "issuer": "freeCodeCamp",
+    "issueDate": "2024-06",
+    "credentialId": "tapze-bedaa",
+    "credentialUrl": "https://freecodecamp.org/certification/TapZe/back-end-development-and-apis",
+    "skills": ["Node.js", "Express", "MongoDB", "REST API", "JavaScript", "TypeScript", "Github", "Git"]
+  },
+  {
+    "name": "Game dan Animasi (Talent Scouting Academy)",
+    "issuer": "Digital Talent Scholarship",
+    "issueDate": "2023-08",
+    "credentialId": "2006927840-111",
+    "credentialUrl": "https://digitalent.komdigi.go.id/cek-sertifikat",
+    "skills": ["Game", "Animation", "Blender", "Unity", "C#"]
+  },
+  {
+    "name": "Artificial Intelligence BIZ (AIBIZ)",
+    "issuer": "CertNexus",
+    "issueDate": "2023-02",
+    "credentialId": "410d7f4c-a07d-472d-873e-520cb710c64e",
+    "credentialUrl": "https://www.credential.net/410d7f4c-a07d-472d-873e-520cb710c64e",
+    "skills": ["Artificial Intelligence", "Business", "AI", "TensorFlow", "Python", "Object Detection"]
   }
 ]

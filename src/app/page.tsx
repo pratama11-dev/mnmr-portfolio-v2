@@ -104,7 +104,7 @@ export default function Home() {
       <section id="certifications" className="mt-16 sm:mt-20">
         <h2 className="text-2xl font-semibold">Certifications</h2>
         <p className="mt-3 text-muted-foreground">Highlights of certifications.</p>
-        <CertificationsList items={certifications} />
+        <CertificationsList items={certifications?.sort((a, b) => new Date(b?.issueDate ?? "").getTime() - new Date(a?.issueDate ?? "").getTime())} />
       </section>
 
       <section id="contact" className="mt-16 sm:mt-20">
