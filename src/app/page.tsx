@@ -64,14 +64,14 @@ export default function Home() {
       </section>
 
       <section id="projects" className="mt-16 sm:mt-20">
-        {/* <div className="flex items-end justify-between gap-4">
+        <div className="flex items-end justify-between gap-4">
           <h2 className="text-2xl font-semibold">Projects</h2>
-          <Button variant="ghost" asChild>
+          {/* <Button variant="ghost" asChild>
             <Link href="/projects">See all</Link>
-          </Button>
+          </Button> */}
         </div>
         <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {/* <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {allProjects.slice(0, 2).map((p) => (
             <ProjectCard
               key={p.slug}
