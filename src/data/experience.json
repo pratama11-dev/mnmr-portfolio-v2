@@ -1,0 +1,44 @@
+[
+  {
+    "company": "PT Pelinitra Gunawan",
+    "type": "Contract",
+    "role": "Full-stack Developer",
+    "location": "Cikampek, Indonesia",
+    "start": "November 2024",
+    "end": "Present",
+    "bullets": [
+      "Re-architected the Core Logistics System by consolidating three legacy modules in the Delivery Order process, reducing database complexity by over 50% and improving performance and maintainability.",
+      "Built a new textile production tracking module for 200+ staff; automated conversion of Sales Orders to Production Orders in one click, halving manual entry and calculations.",
+      "Designed and implemented sales and quotation modules with pricing compliance and approval workflows to ensure data integrity while supporting flexible business rules.",
+      "Rapidly delivered a stock opname (inventory audit) system with web and mobile apps in under a week, from database design to deployment, ensuring full synchronization between physical inventory and the database."
+    ]
+  },
+  {
+    "company": "PT Duta Banua Banjar",
+    "type": "Intern",
+    "role": "Full-stack Developer",
+    "location": "Banjarbaru, Indonesia",
+    "start": "May 2024",
+    "end": "May 2024",
+    "bullets": [
+      "Provided continuous monitoring and maintenance for one month to ensure high server uptime and consistent performance.",
+      "Achieved 100% data recovery with regular backups across two websites.",
+      "Managed servers and databases; executed a seamless migration of the entire web presence with zero user disruption.",
+      "Analyzed and optimized a key workflow on the main website to improve load times by ~25%, increasing user satisfaction and engagement."
+    ]
+  },
+  {
+    "company": "PT Duta Banua Banjar",
+    "type": "Intern",
+    "role": "Full-stack Developer",
+    "location": "Banjarbaru, Indonesia",
+    "start": "September 2023",
+    "end": "November 2023",
+    "bullets": [
+      "Launched a 4‑step newspaper ad booking process with integrated payment, enabling online reservations and saving clients time; delivered Digital Iklan Radar Banjarmasin.",
+      "Implemented a 3‑step e‑newspaper purchase flow with a single QR payment, replacing phone-based processes; built an intuitive app for Digital Radar Banjarmasin.",
+      "Enabled 10 payment methods for e‑newspaper and ad space purchases, increasing flexibility and convenience.",
+      "Architected and launched two new web applications (ad booking and e‑newspaper sales), moving manual phone-based operations fully online."
+    ]
+  }
+]

@@ -3,14 +3,22 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import projects from "@/data/projects.json";
 import skills from "@/data/skills.json";
-import certs from "@/data/certifications.json";
+import about from "@/data/about.json";
+import educationData from "@/data/education.json";
+import experienceData from "@/data/experience.json";
 import { ProjectCard } from "@/components/project-card";
 import { SkillsGrid } from "@/components/skills-grid";
 import { CertificationsList } from "@/components/certifications-list";
-import type { Project, Certification } from "@/types";
+import { Summary } from "@/components/summary";
+import { EducationList } from "@/components/education-list";
+import { WorkExperienceList } from "@/components/work-experience-list";
+import certs from "@/data/certifications.json";
+import type { Project, Certification, Education, Experience } from "@/types";
 
 const allProjects = projects as Project[];
 const certifications = certs as Certification[];
+const education = educationData as Education[];
+const experiences = experienceData as Experience[];
 
 export default function Home() {
   return (
@@ -52,9 +60,7 @@ export default function Home() {
       {/* Sections */}
       <section id="about" className="mt-20 sm:mt-28">
         <h2 className="text-2xl font-semibold">About</h2>
-        <p className="mt-3 text-muted-foreground">
-          I’m Nabil, a full‑stack developer focused on building reliable, scalable products that drive measurable business results. I enjoy turning complex requirements into clean, performant solutions.
-        </p>
+        <Summary paragraphs={about?.summary} />
       </section>
 
       <section id="projects" className="mt-16 sm:mt-20">
@@ -83,6 +89,16 @@ export default function Home() {
         <h2 className="text-2xl font-semibold">Skills</h2>
         <p className="mt-3 text-muted-foreground">A snapshot of my core technologies.</p>
         <SkillsGrid skills={skills} />
+      </section>
+
+      <section id="experience" className="mt-16 sm:mt-20">
+        <h2 className="text-2xl font-semibold">Work Experience</h2>
+        <WorkExperienceList items={experiences} />
+      </section>
+
+      <section id="education" className="mt-16 sm:mt-20">
+        <h2 className="text-2xl font-semibold">Education</h2>
+        <EducationList items={education} />
       </section>
 
       <section id="certifications" className="mt-16 sm:mt-20">
