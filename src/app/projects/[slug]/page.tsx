@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ProjectMeta } from "@/components/project-meta";
 import { ProjectSection } from "@/components/project-section";
 import type { Project, ProjectSectionData } from "@/types";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const allProjects = projects as Project[];
 
@@ -66,7 +68,12 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
   return (
     <main className="mx-auto max-w-6xl px-6 sm:px-8 py-12">
       <div className="mb-4">
-        <Link href="/projects" className="text-sm text-muted-foreground hover:text-foreground">← Back to projects</Link>
+        <Link href="/projects" className="hover:no-underline">
+          <Button variant="ghost" size="sm" className="inline-flex items-center cursor-pointer">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to projects
+          </Button>
+        </Link>
       </div>
 
       {/* Top media card */}

@@ -2,6 +2,8 @@ import Link from "next/link";
 import projects from "@/data/projects.json";
 import { ProjectCard } from "@/components/project-card";
 import type { Project } from "@/types";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const allProjects = projects as Project[];
 
@@ -15,7 +17,12 @@ export default function ProjectsPage() {
             A collection of selected work. Click a project to view details.
           </p>
         </div>
-        <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">← Back home</Link>
+        <Link href="/" className="hover:no-underline">
+          <Button variant="ghost" size="sm" className="inline-flex items-center cursor-pointer">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back home
+          </Button>
+        </Link>
       </div>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
