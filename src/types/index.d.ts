@@ -52,3 +52,23 @@ export interface Certification {
   credentialUrl?: string;
   skills?: string[];
 }
+
+export interface Education {
+  institution: string;
+  program: string;
+  location?: string;
+  start?: string;
+  end?: string;
+  notes?: string[];
+  link?: string;
+}
+
+export interface Experience {
+  company: string;
+  role: string;
+  location?: string;
+  start: string;
+  end?: string; // "Present" or a date/month string
+  bullets: string[];
+  type?: string; // e.g., "Project"
+}

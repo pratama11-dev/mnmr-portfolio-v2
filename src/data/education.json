@@ -1,0 +1,38 @@
+[
+    {
+      "institution": "Hacktiv8",
+      "program": "FGA Bootcamp Web Development Program + React JS (Transcript)",
+      "location": "Jakarta, Indonesia",
+      "start": "August 2024",
+      "end": "October 2024",
+      "link": ""
+    },
+    {
+      "institution": "Orbit Future Academy",
+      "program": "AWS re/Start Program",
+      "location": "Jakarta, Indonesia",
+      "start": "May 2024",
+      "end": "September 2024"
+    },
+    {
+      "institution": "Universitas Lambung Mangkurat",
+      "program": "Bachelor of Computer Science (GPA 3.82 / 4.00)",
+      "location": "Banjarmasin, Indonesia",
+      "start": "September 2020",
+      "end": "February 2024"
+    },
+    {
+      "institution": "Infinite Learning Indonesia",
+      "program": "Game Development and Animation Digitalent Program",
+      "location": "Jakarta, Indonesia",
+      "start": "August 2023",
+      "end": "August 2023"
+    },
+    {
+      "institution": "BISA AI Academy (PT BISA ARTIFISIAL INDONESIA)",
+      "program": "Game Development Student Kampus Merdeka Program",
+      "location": "Jakarta, Indonesia",
+      "start": "August 2022",
+      "end": "December 2022"
+    }
+  ]

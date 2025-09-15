@@ -16,9 +16,9 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const project = allProjects.find((p) => p.slug === params.slug);
+  const project = allProjects.find((p) => p?.slug === params?.slug);
   return {
-    title: project ? `${project.title} — Project` : "Project",
+    title: project ? `${project?.title} — Project` : "Project",
     description: project?.summary || project?.description,
   };
 }
