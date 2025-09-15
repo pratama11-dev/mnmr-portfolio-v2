@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import projects from "@/data/projects.json";
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       <section id="projects" className="mt-16 sm:mt-20">
-        <div className="flex items-end justify-between gap-4">
+        {/* <div className="flex items-end justify-between gap-4">
           <h2 className="text-2xl font-semibold">Projects</h2>
           <Button variant="ghost" asChild>
             <Link href="/projects">See all</Link>
@@ -82,6 +82,20 @@ export default function Home() {
               variant="listing"
             />
           ))}
+        </div> */}
+        <div className="mt-4 rounded-xl border border-dashed border-border bg-muted/20 p-6 text-center">
+          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
+            <Rocket className="h-5 w-5" />
+          </div>
+          <h3 className="text-base font-semibold">The projects page is in progress!</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            I’m refining the projects page and adding more content soon. In the meantime, feel free to explore other sections or get in touch.
+          </p>
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <Button variant="outline" asChild>
+              <a href="#contact">Contact</a>
+            </Button>
+          </div>
         </div>
       </section>
 
