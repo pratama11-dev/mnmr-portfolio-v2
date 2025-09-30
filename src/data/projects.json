@@ -1,43 +1,120 @@
 [
   {
-    "slug": "pulau-intan-lestari-modules",
-    "title": "Pulau Intan Lestari Modules",
-    "images": [],
-    "summary": "Workflow optimizations across modules that improved efficiency and UX for internal teams.",
-    "links": [
-      { "label": "Live Demo", "href": "https://example.com/demo" },
-      { "label": "Repository", "href": "https://github.com/org/repo" }
+    "slug": "ppic-pil-ckw",
+    "title": "PPIC PIL CKW",
+    "images": [
+      "/projects/ppic-pil-ckw/dashboard-1.png",
+      "/projects/ppic-pil-ckw/dashboard-2.png",
+      "/projects/ppic-pil-ckw/dashboard-3.png",
+      "/projects/ppic-pil-ckw/hr-1.png"
     ],
+    "summary": "A PPIC-focused web system for the CKW (Cikawung) region handling stage-1 production — converting raw materials into usable materials — with HRIS integration for workforce and R&D for planning new item types. Outputs transit to CKP (Cikampek) for SO-driven processing.",
+    "links": [],
     "meta": {
       "role": "Full‑Stack Developer",
-      "company": "Pulau Intan Lestari",
-      "period": "2024 — 2025",
-      "team": "3 engineers, 1 designer, 1 PM",
-      "location": "Jakarta, Indonesia",
-      "tech": ["Next.js", "NestJS", "TypeScript", "PostgreSQL"],
-      "tools": ["Prisma", "Bull", "React Query", "Tailwind", "AWS"]
+      "company": "PT Pelinitra Gunawan",
+      "period": "November 2024 — Present",
+      "team": "4 Engineers, 1 Tech Lead",
+      "location": "Cikampek / Cikawung, Indonesia",
+      "tech": ["React", "Next.js", "TypeScript", "Express", "Node.js"],
+      "tools": ["TanStack Query", "Ant Design", "WebSockets", "Prisma", "Bull", "Multer", "Nodemailer", "REST API", "EJS", "DND Kit"]
     },
     "sections": [
       {
         "title": "Context",
         "paragraphs": [
-          "The operations team needed faster internal workflows spanning inventory, orders, and reporting."
+          "Built for the PPIC division in CKW to manage stage-1 production: converting raw materials into usable materials that are shipped to CKP (Cikampek) for Sales Order–driven processing.",
+          "Includes a workforce (HRIS) facet and R&D support for planning and creating new item types.",
+          "Due to confidentiality, only a subset of screenshots are shown."
         ]
       },
       {
-        "title": "Responsibilities",
+        "title": "Scope & Modules",
         "bullets": [
-          "Architected module boundaries and API contracts across services.",
-          "Led the frontend build in Next.js with SSR for key workflows.",
-          "Introduced job queues (Bull) for long‑running tasks."
+          "Master data: items, machines, usage records, on‑going machines.",
+          "Machine map/visualization to reflect real‑time utilization.",
+          "HRIS: workforce management and assignment to lines/stations.",
+          "R&D: plan and trial new item types before operationalization."
+        ]
+      },
+      {
+        "title": "Technical Decisions",
+        "bullets": [
+          "Next.js + React + TypeScript for fast UI iteration and SSR where helpful.",
+          "TanStack Query for data fetching/caching and optimistic UX.",
+          "Ant Design for consistent, accessible UI components.",
+          "Prisma for schema modeling and type‑safe data access.",
+          "Bull queues for background processing and long‑running jobs.",
+          "WebSockets for live machine status and production updates.",
+          "Multer and Nodemailer for uploads and event notifications.",
+          "REST API with Express/Node.js for service boundaries."
         ]
       },
       {
         "title": "Outcomes",
+        "paragraphs": [
+          "Streamlined production coordination, clearer machine utilization, and tighter HRIS/R&D alignment."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "pms-sales-performance",
+    "title": "PMS - Sales Performance Management",
+    "images": [
+      "/projects/pms/dashboard-1.png",
+      "/projects/pms/leads-1.png",
+      "/projects/pms/leads-2.png"
+    ],
+    "summary": "A web platform for sales performance management with interactive dashboards and streamlined workflows. Covers PR→PO procurement, customer PO, quotations and pricing, Sales Orders with recommended auto-prices, lead management, and end‑to‑end SO tracking.",
+    "links": [],
+    "meta": {
+      "role": "Full‑Stack Developer",
+      "company": "PT Pelinitra Gunawan",
+      "period": "January 2025 — Present",
+      "team": "4 Engineers, 1 Tech Lead",
+      "location": "Cikampek, Indonesia",
+      "tech": ["React", "Next.js", "TypeScript", "Express", "Node.js"],
+      "tools": ["TanStack Query", "Ant Design", "WebSockets", "Prisma", "Bull", "Multer", "Nodemailer", "REST API", "EJS", "DND Kit"]
+    },
+    "sections": [
+      {
+        "title": "Context",
+        "paragraphs": [
+          "Designed to give operations and commercial teams real‑time visibility of sales productivity, pipeline health, and order fulfillment—from lead to invoice.",
+          "Consolidates pricing logic, quotations, orders, and procurement (PR→PO) to reduce manual handoffs and improve SLA adherence."
+        ]
+      },
+      {
+        "title": "Scope & Modules",
         "bullets": [
-          "Reduced task completion time by ~35%.",
-          "Improved perceived performance (TTI -30%).",
-          "Raised internal adoption across departments."
+          "Leads & Marketing: capture sources, qualify leads, and progress opportunities.",
+          "Sales Quotation & Quotation Pricing: generate quotes with recommended price baselines; manual adjustments supported with audit trails.",
+          "Sales Order (SO): create SOs from approved quotes; automatic price suggestions based on strategy and cost inputs.",
+          "SO Tracking: end‑to‑end status, fulfillment progress, and exceptions.",
+          "Master Data: items, customers, pricing rules, sales teams/territories.",
+          "Procurement: PR→PO workflow for purchasing materials and services.",
+          "Customer PO: register and reconcile customer POs against quotations/SOs."
+        ]
+      },
+      {
+        "title": "Technical Decisions",
+        "bullets": [
+          "Next.js + React + TypeScript for fast, type‑safe iteration and SSR/ISR where helpful.",
+          "TanStack Query for caching, revalidation, and optimistic UX.",
+          "Ant Design for consistent, accessible UI with fast CRUD scaffolding.",
+          "Prisma for schema modeling and type‑safe DB access; REST API with Express/Node.js.",
+          "Bull for background jobs (price recomputations, email notifications, document generation).",
+          "WebSockets for live updates on SO status, procurement state, and dashboards.",
+          "Multer for uploads (supporting attachments on PR/PO/Quote); Nodemailer for approval flows."
+        ]
+      },
+      {
+        "title": "Outcomes",
+        "paragraphs": [
+          "Centralized sales pipeline and order tracking improved visibility and reduced cross‑team coordination friction.",
+          "Automated price recommendations shortened quotation turnaround and standardized pricing practices.",
+          "Streamlined PR→PO and customer PO handling reduced manual errors and sped up fulfillment."
         ]
       }
     ]
