@@ -15,9 +15,9 @@ import { WorkExperienceList } from "@/components/work-experience-list";
 import certs from "@/data/certifications.json";
 import type { Project, Certification, Education, Experience } from "@/types";
 
-const allProjects = projects as Project[];
+const allProjects = projects?.sort((a, b) => new Date(b?.meta?.startDate ?? "").getTime() - new Date(a?.meta?.startDate ?? "").getTime()) as Project[];
 const certifications = certs as Certification[];
-const education = educationData as Education[];
+const education = educationData as Education[]; 
 const experiences = experienceData as Experience[];
 
 export default function Home() {
@@ -66,12 +66,12 @@ export default function Home() {
       <section id="projects" className="mt-16 sm:mt-20">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-2xl font-semibold">Projects</h2>
-          {/* <Button variant="ghost" asChild>
+          <Button variant="ghost" asChild>
             <Link href="/projects">See all</Link>
-          </Button> */}
+          </Button>
         </div>
         <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
-        {/* <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {allProjects.slice(0, 2).map((p) => (
             <ProjectCard
               key={p.slug}
@@ -82,8 +82,8 @@ export default function Home() {
               variant="listing"
             />
           ))}
-        </div> */}
-        <div className="mt-4 rounded-xl border border-dashed border-border bg-muted/20 p-6 text-center">
+        </div>
+        {/* <div className="mt-4 rounded-xl border border-dashed border-border bg-muted/20 p-6 text-center">
           <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
             <Rocket className="h-5 w-5" />
           </div>
@@ -96,7 +96,7 @@ export default function Home() {
               <a href="#contact">Contact</a>
             </Button>
           </div>
-        </div>
+        </div> */}
       </section>
 
       <section id="skills" className="mt-16 sm:mt-20">

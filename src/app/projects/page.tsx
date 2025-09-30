@@ -5,7 +5,7 @@ import type { Project } from "@/types";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
-const allProjects = projects as Project[];
+const allProjects = projects?.sort((a, b) => new Date(b?.meta?.startDate ?? "").getTime() - new Date(a?.meta?.startDate ?? "").getTime()) as Project[];
 
 export default function ProjectsPage() {
   return (
