@@ -19,7 +19,7 @@
       "team": "4 Engineers, 1 Tech Lead",
       "location": "Cikampek / Cikawung, Indonesia",
       "tech": ["React", "Next.js", "TypeScript", "Express", "Node.js"],
-      "tools": ["TanStack Query", "Ant Design", "WebSockets", "Prisma", "Bull", "Multer", "Nodemailer", "REST API", "EJS", "DND Kit"]
+      "tools": ["TanStack Query", "Ant Design", "Prisma", "Bull", "Multer", "Nodemailer", "REST API", "EJS", "DND Kit"]
     },
     "sections": [
       {
@@ -47,7 +47,6 @@
           "Ant Design for consistent, accessible UI components.",
           "Prisma for schema modeling and type‑safe data access.",
           "Bull queues for background processing and long‑running jobs.",
-          "WebSockets for live machine status and production updates.",
           "Multer and Nodemailer for uploads and event notifications.",
           "REST API with Express/Node.js for service boundaries."
         ]
@@ -79,7 +78,7 @@
       "team": "4 Engineers, 1 Tech Lead",
       "location": "Cikampek, Indonesia",
       "tech": ["React", "Next.js", "TypeScript", "Express", "Node.js"],
-      "tools": ["TanStack Query", "Ant Design", "WebSockets", "Prisma", "Bull", "Multer", "Nodemailer", "REST API", "EJS", "DND Kit"]
+      "tools": ["TanStack Query", "Ant Design", "Prisma", "Bull", "Multer", "Nodemailer", "REST API", "EJS", "DND Kit"]
     },
     "sections": [
       {
@@ -109,7 +108,6 @@
           "Ant Design for consistent, accessible UI with fast CRUD scaffolding.",
           "Prisma for schema modeling and type‑safe DB access; REST API with Express/Node.js.",
           "Bull for background jobs (price recomputations, email notifications, document generation).",
-          "WebSockets for live updates on SO status, procurement state, and dashboards.",
           "Multer for uploads (supporting attachments on PR/PO/Quote); Nodemailer for approval flows."
         ]
       },
@@ -175,7 +173,7 @@
           "Ant Design for consistent, accessible enterprise UI patterns.",
           "Prisma for schema modeling and type‑safe DB access; REST API built on Express/Node.js.",
           "Bull for background jobs (document generation, nightly reconciliations, notification batching).",
-          "WebSockets for live shipment status, counting session updates, and inventory events.",
+          "WebSockets for inventory scaling events.",
           "Multer for attachment uploads (proof of delivery, counting photos); Nodemailer for approvals/alerts."
         ]
       },
@@ -232,7 +230,7 @@
         "title": "Technical Decisions",
         "bullets": [
           "Ionic + Capacitor for cross-platform mobile with native plugins (Sunmi Scanner SDK) while sharing UI paradigms with the web app.",
-          "WebSockets for real-time shipment progress, scan events, and counter updates.",
+          "WebSockets for real-time item scaling.",
           "TanStack Query for resilient caching/sync and optimistic UI on both web and mobile.",
           "Prisma with REST (Express/Node.js) for type-safe persistence and clean service boundaries.",
           "Bull queues for background sync, document generation, and reconciliation jobs.",
