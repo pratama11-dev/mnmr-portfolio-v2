@@ -10,7 +10,7 @@
       "/projects/logixpair/form-2.png",
       "/projects/logixpair/not-found.png"
     ],
-    "summary": "A multi-tenant B2B SaaS platform built from scratch to replace CargoWise, the existing enterprise freight forwarding system at PT Logimark Forwarding Indonesia. Covers end-to-end freight operations: shipment and consolidation management, AR/AP billing, electronic documents, HBL/AWB print templates, multi-tenant SSO, and full audit logging.",
+    "summary": "A multi-tenant B2B SaaS platform built from scratch to replace an existing enterprise freight forwarding system at PT Logimark Forwarding Indonesia. Covers end-to-end freight operations: shipment and consolidation management, AR/AP billing, electronic documents, HBL/AWB print templates, multi-tenant SSO, and full audit logging.",
     "links": [],
     "meta": {
       "role": "Full-Stack Developer (Sole Developer)",
@@ -27,8 +27,8 @@
       {
         "title": "Context",
         "paragraphs": [
-          "PT Logimark Forwarding Indonesia is part of the Logimark Group — 24 offices across 12 countries in Asia. The group currently runs CargoWise as their core operations system at significant licensing cost (~$9,000/month for the Indonesia branch alone).",
-          "LogiXpair is being built to replace it, with a phased rollout: first Logimark Indonesia, then the wider Logimark Group, then as a commercial SaaS product open to the broader freight forwarding market."
+          "PT Logimark Forwarding Indonesia is part of a regional freight forwarding group with operations across Asia. LogiXpair is being built to replace an expensive legacy operations platform while keeping control of system ownership, deployment, and long-term product direction.",
+          "The rollout is planned in phases: first for Logimark Indonesia, then wider internal group adoption, then potential commercial SaaS availability for freight forwarding teams."
         ]
       },
       {
@@ -61,7 +61,7 @@
         "title": "Outcomes",
         "paragraphs": [
           "Delivered the platform solo in under 6 months at approximately 3–4x industry average solo developer output",
-          "Engineering a system capable of replacing enterprise-grade CargoWise licensing across a 24-office international group",
+          "Engineering a system capable of replacing enterprise-grade freight forwarding software with an internally owned platform",
           "Custom scaffolding tooling compresses new module build time from days to hours, sustaining high output velocity throughout active development."
         ]
       }
