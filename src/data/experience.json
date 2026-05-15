@@ -1,11 +1,26 @@
 [
   {
+    "company": "PT Logimark Forwarding Indonesia",
+    "type": "Full-time",
+    "role": "Full-stack Developer",
+    "location": "Jakarta, Indonesia",
+    "start": "November 2025",
+    "end": "Present",
+    "bullets": [
+      "Serve as the sole full-stack developer architecting a multi-tenant freight forwarding platform to replace the legacy Cargo West system. Personally responsible for all technical decisions from database schema design to tech stack selection across 4 repositories, producing output at approximately 3–4x the industry average for a solo developer.",
+      "Championed a unified TypeScript ecosystem (Bun + Express + tRPC + Prisma + Better Auth for the backend; Angular + PrimeNG for the frontend) over a proposed PHP/Laravel stack, consolidating the entire codebase into a single language across 4 repositories (BE SSO, BE APP, FE SSO, FE APP) to maximize async performance and eliminate cross-language friction.",
+      "Architected a multi-tenant SSO system with 1 shared authentication database and isolated per-tenant application databases, implementing encrypted credentials, JWT/JWKS authentication, full audit logging, and HTTP-only cookie sessions for XSS-safe auth with zero CSRF token overhead — maintaining architectural consistency across all modules through custom scaffolding tooling that reduced new module build time from days to hours.",
+      "Developed reusable, inline \"Excel-like\" row-editing components that allow operations staff to add and edit multiple rows in a single batch submission, eliminating repetitive modal open/close cycles and streamlining bulk data entry across 6+ entity types in complex multi-layered shipment records.",
+      "Engineered a fault-tolerant file upload pipeline with a self-purging temporary directory (1–24 hour lifecycle) and an isolated Multer endpoint. Built a fully automated CI/CD pipeline: backend compiles to a single Bun executable (zero source code exposure) deployed via Docker with health checks; frontend builds are obfuscated and served through Nginx for static delivery."
+    ]
+  },
+  {
     "company": "PT Pelinitra Gunawan",
-    "type": "Contract",
+    "type": "Full-time",
     "role": "Full-stack Developer",
     "location": "Cikampek, Indonesia",
     "start": "November 2024",
-    "end": "Present",
+    "end": "November 2025",
     "bullets": [
       "Re-architected the Core Logistics System by consolidating three legacy modules in the Delivery Order process, reducing database complexity by over 50% and improving performance and maintainability.",
       "Built a new textile production tracking module for 200+ staff; automated conversion of Sales Orders to Production Orders in one click, halving manual entry and calculations.",
@@ -15,30 +30,16 @@
   },
   {
     "company": "PT Duta Banua Banjar",
-    "type": "Intern",
-    "role": "Full-stack Developer",
-    "location": "Banjarbaru, Indonesia",
-    "start": "May 2024",
-    "end": "May 2024",
-    "bullets": [
-      "Provided continuous monitoring and maintenance for one month to ensure high server uptime and consistent performance.",
-      "Achieved 100% data recovery with regular backups across two websites.",
-      "Managed servers and databases; executed a seamless migration of the entire web presence with zero user disruption.",
-      "Analyzed and optimized a key workflow on the main website to improve load times by ~25%, increasing user satisfaction and engagement."
-    ]
-  },
-  {
-    "company": "PT Duta Banua Banjar",
-    "type": "Intern",
+    "type": "Project",
     "role": "Full-stack Developer",
     "location": "Banjarbaru, Indonesia",
     "start": "September 2023",
-    "end": "November 2023",
+    "end": "November 2023, May 2024",
     "bullets": [
-      "Launched a 4‑step newspaper ad booking process with integrated payment, enabling online reservations and saving clients time; delivered Digital Iklan Radar Banjarmasin.",
-      "Implemented a 3‑step e‑newspaper purchase flow with a single QR payment, replacing phone-based processes; built an intuitive app for Digital Radar Banjarmasin.",
-      "Enabled 10 payment methods for e‑newspaper and ad space purchases, increasing flexibility and convenience.",
-      "Architected and launched two new web applications (ad booking and e‑newspaper sales), moving manual phone-based operations fully online."
+      "Architected and launched two web applications: a 4-step online ad booking system and a 3-step e-newspaper sales platform with QR payment.",
+      "Moved manual phone-based workflows online for the first time and integrated 10 payment methods for ad booking and e-newspaper purchases.",
+      "Managed servers and databases, executed a complete website migration with zero user disruption, and secured 100% data recovery with regular backups for two websites.",
+      "Improved the main website workflow by about 25% through analysis and optimization, followed by one month of monitoring for uptime and reliability."
     ]
   }
 ]

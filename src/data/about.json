@@ -1,6 +1,7 @@
 {
   "summary": [
-    "I am Muhammad Nabil Muyassar Rahman, a dedicated full-stack developer based in Central Jakarta, Indonesia, with advanced expertise in modern web development frameworks, including Next.js, NestJS, ExpressJS, Laravel, and Flask. Proficient in TypeScript, JavaScript, Python, PHP, and Java, I specialize in building high-performance, scalable software solutions that align with strategic business objectives.",
-    "My experience managing AWS and Proxmox infrastructures, alongside SQL and NoSQL databases, enables me to deliver robust systems that consistently surpass expectations. I’ve optimized critical workflows for the Pulau Intan Lestari modules and the Radar Banjarmasin Digital Website, significantly improving user experience and engagement. I aim to grow into a senior full-stack developer while laying the groundwork for a transformative tech startup to create innovative, globally impactful digital solutions."
+    "I am Muhammad Nabil Muyassar Rahman, a full-stack software developer based in Central Jakarta, Indonesia. I build enterprise platforms for logistics, freight forwarding, PPIC, inventory, sales, and digital publishing workflows.",
+    "My recent work focuses on TypeScript-first systems with Bun, Express, tRPC, Prisma, Better Auth, Angular, and PrimeNG. I take ownership from schema design and stack decisions through frontend implementation, deployment, and production maintenance.",
+    "I care about software that reduces operational friction: unified codebases, multi-tenant SSO, audit-ready data flows, Excel-like batch editing, reliable file pipelines, and CI/CD that keeps source code and deployments controlled."
   ]
 }

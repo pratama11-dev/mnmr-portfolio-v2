@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Muhammad Nabil Muyassar Rahman — Portfolio",
   description:
-    "Full-Stack Developer specialized in React/Next.js, TypeScript, NestJS, and modern UI.",
+    "Full-stack software developer building TypeScript-first logistics, freight forwarding, PPIC, inventory, and sales platforms.",
 };
 
 export default function RootLayout({
@@ -54,15 +54,18 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="mx-auto max-w-5xl px-6 sm:px-8 h-14 flex items-center justify-between">
+            <div className="mx-auto max-w-6xl px-5 sm:px-8 h-14 flex items-center justify-between">
               <Link href="/" className="font-semibold tracking-tight">
-                Muhammad Nabil Muyassar Rahman
+                MNMR
               </Link>
               <div className="flex items-center gap-3">
                 {/* Desktop nav */}
                 <nav className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
                   <Link href="/#about" className="hover:text-foreground">
                     About
+                  </Link>
+                  <Link href="/#experience" className="hover:text-foreground">
+                    Experience
                   </Link>
                   <Link href="/projects" className="hover:text-foreground">
                     Projects
@@ -97,6 +100,12 @@ export default function RootLayout({
                       className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     >
                       About
+                    </Link>
+                    <Link
+                      href="/#experience"
+                      className="block rounded px-2 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    >
+                      Experience
                     </Link>
                     <Link
                       href="/projects"
@@ -137,7 +146,7 @@ export default function RootLayout({
           </header>
           <main>{children}</main>
           <footer className="mt-auto border-t border-border/80">
-            <div className="mx-auto max-w-5xl px-6 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
+            <div className="mx-auto max-w-6xl px-5 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
               <p>
                 {new Date().getFullYear()} Muhammad Nabil Muyassar Rahman. All
                 rights reserved.
