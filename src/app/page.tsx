@@ -1,4 +1,13 @@
-import { Github, Linkedin, Mail, Rocket } from "lucide-react";
+import {
+  ArrowRight,
+  Database,
+  Github,
+  Linkedin,
+  Mail,
+  Network,
+  ShieldCheck,
+  Terminal,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import projects from "@/data/projects.json";
@@ -17,117 +26,192 @@ import type { Project, Certification, Education, Experience } from "@/types";
 
 const allProjects = projects?.sort((a, b) => new Date(b?.meta?.startDate ?? "").getTime() - new Date(a?.meta?.startDate ?? "").getTime()) as Project[];
 const certifications = certs as Certification[];
-const education = educationData as Education[]; 
+const education = educationData as Education[];
 const experiences = experienceData as Experience[];
+
+const operatingFocus = [
+  {
+    title: "Multi-tenant architecture",
+    description:
+      "Shared SSO, isolated tenant application data, encrypted credentials, JWT/JWKS auth, audit logging, and HTTP-only sessions.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Operations-first UI",
+    description:
+      "Inline Excel-like editing, batch submission, fewer modal loops, and workflows shaped around high-volume operational data entry.",
+    icon: Network,
+  },
+  {
+    title: "Controlled delivery",
+    description:
+      "Bun executables, Docker health checks, obfuscated frontend builds, Nginx static delivery, and isolated file upload pipelines.",
+    icon: Terminal,
+  },
+];
 
 export default function Home() {
   return (
-    <main className="max-w-3xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
-      {/* Hero */}
-      <section className="text-center sm:text-left">
-        <p className="text-sm text-muted-foreground">Software Engineer</p>
-        <h1 className="mt-2 text-4xl/tight sm:text-5xl/tight font-bold tracking-tight">
-          <span className="opacity-80">Hi, I’m</span>{" "}
-          <span className="underline decoration-border decoration-2 underline-offset-4">Muhammad Nabil Muyassar Rahman</span>
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">Full-Stack Developer — Central Jakarta, Indonesia</p>
-        <p className="mt-4 text-base/7 sm:text-lg/8 text-muted-foreground">
-          I build high‑performance, scalable web apps with Next.js, NestJS, Express, Laravel, and Flask — using TypeScript, JavaScript, Python, PHP, and Java. I manage AWS and Proxmox infrastructure and work across SQL/NoSQL databases to deliver robust, business‑aligned systems. Notable impact includes workflow optimizations for Pulau Intan Lestari modules and the Radar Banjarmasin Digital Website, significantly improving UX and engagement.
-        </p>
+    <main className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-18">
+      <section className="relative left-1/2 -mx-[50vw] w-screen overflow-hidden border-y border-border py-14 sm:py-20">
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--grid-line)_1px,transparent_1px),linear-gradient(180deg,var(--grid-line)_1px,transparent_1px)] bg-[size:42px_42px] [mask-image:linear-gradient(90deg,transparent,black_10%,black_86%,transparent),linear-gradient(180deg,transparent,black_12%,black_92%,transparent)] [mask-composite:intersect]" />
+        <div className="absolute right-[10vw] top-8 -z-10 hidden h-72 w-72 rounded-full bg-[color:var(--signal)]/12 blur-3xl sm:block" />
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-end">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-3 py-1 text-xs font-medium uppercase tracking-[0.22em] text-muted-foreground">
+              <Database className="size-3.5" />
+              Software Developer - Central Jakarta
+            </p>
+            <h1 className="mt-6 max-w-4xl text-4xl/tight font-black tracking-tight sm:text-6xl/tight">
+              Muhammad Nabil Muyassar Rahman
+            </h1>
+            <p className="mt-4 max-w-2xl text-xl/8 font-semibold text-foreground/85 sm:text-2xl/9">
+              Full-stack software developer for logistics, freight forwarding,
+              and enterprise operations.
+            </p>
+            <p className="mt-5 max-w-3xl text-base/7 text-muted-foreground sm:text-lg/8">
+              I build TypeScript-first platforms across backend, frontend,
+              authentication, database design, deployment, and operational
+              workflows. Recent work focuses on multi-tenant systems, SSO,
+              batch editing, file pipelines, and controlled delivery.
+            </p>
 
-        <div className="mt-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-          <Button asChild>
-            <Link href="/projects">View Projects</Link>
-          </Button>
-          <Button variant="outline" asChild>
-            <a href="#contact">Contact Me</a>
-          </Button>
-        </div>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button asChild size="lg" className="group">
+                <Link href="/projects">
+                  View Projects
+                  <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button variant="outline" asChild size="lg">
+                <a href="#contact">Contact Me</a>
+              </Button>
+            </div>
 
-        <div className="mt-6 flex items-center justify-center sm:justify-start gap-4 text-muted-foreground">
-          <a href="https://github.com/TapZe" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors" aria-label="GitHub">
-            <Github className="size-5" />
-          </a>
-          <a href="https://www.linkedin.com/in/muhammad-nabil-muyassar-rahman" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors" aria-label="LinkedIn">
-            <Linkedin className="size-5" />
-          </a>
-          <a href="#contact" className="hover:text-foreground transition-colors" aria-label="Email">
-            <Mail className="size-5" />
-          </a>
-        </div>
-      </section>
-
-      {/* Sections */}
-      <section id="about" className="mt-20 sm:mt-28">
-        <h2 className="text-2xl font-semibold">About</h2>
-        <Summary paragraphs={about?.summary} />
-      </section>
-
-      <section id="projects" className="mt-16 sm:mt-20">
-        <div className="flex items-end justify-between gap-4">
-          <h2 className="text-2xl font-semibold">Projects</h2>
-          <Button variant="ghost" asChild>
-            <Link href="/projects">See all</Link>
-          </Button>
-        </div>
-        <p className="mt-3 text-muted-foreground">A few things I’ve worked on recently.</p>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {allProjects.slice(0, 2).map((p) => (
-            <ProjectCard
-              key={p.slug}
-              slug={p.slug}
-              title={p.title}
-              description={p.summary ?? p.description ?? ""}
-              image={p.images?.[0] ?? p.coverImage ?? null}
-              variant="listing"
-            />
-          ))}
-        </div>
-        {/* <div className="mt-4 rounded-xl border border-dashed border-border bg-muted/20 p-6 text-center">
-          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-            <Rocket className="h-5 w-5" />
+            <div className="mt-8 flex items-center gap-4 text-muted-foreground">
+              <a href="https://github.com/TapZe" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors" aria-label="GitHub">
+                <Github className="size-5" />
+              </a>
+              <a href="https://www.linkedin.com/in/muhammad-nabil-muyassar-rahman" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors" aria-label="LinkedIn">
+                <Linkedin className="size-5" />
+              </a>
+              <a href="#contact" className="hover:text-foreground transition-colors" aria-label="Email">
+                <Mail className="size-5" />
+              </a>
+            </div>
           </div>
-          <h3 className="text-base font-semibold">The projects page is in progress!</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            I’m refining the projects page and adding more content soon. In the meantime, feel free to explore other sections or get in touch.
+
+          <aside className="border border-border bg-card/90 p-5 shadow-sm backdrop-blur">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+              Working style
+            </p>
+            <ul className="mt-5 space-y-4 text-sm/6 text-muted-foreground">
+              <li className="border-l-2 border-[color:var(--signal)] pl-3">
+                Own technical direction end to end, from schema design and stack
+                selection to production deployment.
+              </li>
+              <li className="border-l-2 border-border pl-3">
+                Prefer unified TypeScript systems with reusable scaffolding and
+                clear module boundaries.
+              </li>
+              <li className="border-l-2 border-border pl-3">
+                Design for operations teams that need batch entry, traceability,
+                and fewer repetitive handoffs.
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section className="mt-12 grid gap-4 md:grid-cols-3">
+        {operatingFocus.map(({ title, description, icon: Icon }) => (
+          <article key={title} className="border border-border bg-card p-5">
+            <div className="flex size-10 items-center justify-center border border-border bg-background text-[color:var(--signal)]">
+              <Icon className="size-5" />
+            </div>
+            <h2 className="mt-5 text-lg font-semibold">{title}</h2>
+            <p className="mt-2 text-sm/6 text-muted-foreground">{description}</p>
+          </article>
+        ))}
+      </section>
+
+      <div className="mx-auto max-w-4xl">
+        <section id="about" className="mt-20 sm:mt-28">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">About</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">
+            Business systems, built end to end
+          </h2>
+          <Summary paragraphs={about?.summary} />
+        </section>
+
+        <section id="experience" className="mt-16 sm:mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Experience</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">Recent Work</h2>
+          <WorkExperienceList items={experiences} />
+        </section>
+
+        <section id="skills" className="mt-16 sm:mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Skills</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">Stack from CV</h2>
+          <p className="mt-3 text-muted-foreground">
+            Tools grouped by where they show up in production systems.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-3">
-            <Button variant="outline" asChild>
-              <a href="#contact">Contact</a>
+          <SkillsGrid skills={skills} />
+        </section>
+
+        <section id="projects" className="mt-16 sm:mt-20">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Projects</p>
+              <h2 className="mt-2 text-3xl font-black tracking-tight">Selected Systems</h2>
+            </div>
+            <Button variant="ghost" asChild>
+              <Link href="/projects">See all</Link>
             </Button>
           </div>
-        </div> */}
-      </section>
+          <p className="mt-3 text-muted-foreground">
+            Operations-heavy platforms across freight forwarding, production
+            floors, sales teams, and digital publishing workflows.
+          </p>
+          <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {allProjects.slice(0, 4).map((p) => (
+              <ProjectCard
+                key={p.slug}
+                slug={p.slug}
+                title={p.title}
+                description={p.summary ?? p.description ?? ""}
+                image={p.images?.[0] ?? p.coverImage ?? null}
+                variant="listing"
+              />
+            ))}
+          </div>
+        </section>
 
-      <section id="skills" className="mt-16 sm:mt-20">
-        <h2 className="text-2xl font-semibold">Skills</h2>
-        <p className="mt-3 text-muted-foreground">A snapshot of my core technologies.</p>
-        <SkillsGrid skills={skills} />
-      </section>
+        <section id="education" className="mt-16 sm:mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Education</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">Training</h2>
+          <EducationList items={education} />
+        </section>
 
-      <section id="experience" className="mt-16 sm:mt-20">
-        <h2 className="text-2xl font-semibold">Work Experience</h2>
-        <WorkExperienceList items={experiences} />
-      </section>
+        <section id="certifications" className="mt-16 sm:mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Certifications</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">Proof Points</h2>
+          <p className="mt-3 text-muted-foreground">Recent certification highlights from CV.</p>
+          <CertificationsList items={certifications?.sort((a, b) => new Date(b?.issueDate ?? "").getTime() - new Date(a?.issueDate ?? "").getTime()).slice(0, 3)} />
+        </section>
 
-      <section id="education" className="mt-16 sm:mt-20">
-        <h2 className="text-2xl font-semibold">Education</h2>
-        <EducationList items={education} />
-      </section>
-
-      <section id="certifications" className="mt-16 sm:mt-20">
-        <h2 className="text-2xl font-semibold">Certifications</h2>
-        <p className="mt-3 text-muted-foreground">Highlights of certifications.</p>
-        <CertificationsList items={certifications?.sort((a, b) => new Date(b?.issueDate ?? "").getTime() - new Date(a?.issueDate ?? "").getTime())} />
-      </section>
-
-      <section id="contact" className="mt-16 sm:mt-20">
-        <h2 className="text-2xl font-semibold">Contact</h2>
-        <p className="mt-3 text-muted-foreground">
-          Interested in working together? Reach out:{" "}
-          <a href="mailto:nabil.muyassar.work@gmail.com" className="underline underline-offset-4 hover:text-foreground">nabil.muyassar.work@gmail.com</a>
-        </p>
-      </section>
+        <section id="contact" className="mt-16 border-y border-border py-10 sm:mt-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Contact</p>
+          <h2 className="mt-2 text-3xl font-black tracking-tight">
+            Build something operationally useful
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            Reach out at{" "}
+            <a href="mailto:nabil.muyassar.work@gmail.com" className="underline underline-offset-4 hover:text-foreground">nabil.muyassar.work@gmail.com</a>
+            {" "}or connect through LinkedIn.
+          </p>
+        </section>
+      </div>
     </main>
   );
 }

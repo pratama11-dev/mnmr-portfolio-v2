@@ -1,5 +1,73 @@
 [
   {
+    "slug": "logixpair",
+    "title": "LogiXpair — Multi-Tenant Freight Forwarding Platform",
+    "images": [
+      "/projects/logixpair/login-1.png",
+      "/projects/logixpair/dashboard-1.png",
+      "/projects/logixpair/list-1.png",
+      "/projects/logixpair/form-1.png",
+      "/projects/logixpair/form-2.png",
+      "/projects/logixpair/not-found.png"
+    ],
+    "summary": "A multi-tenant B2B SaaS platform built from scratch to replace CargoWise, the existing enterprise freight forwarding system at PT Logimark Forwarding Indonesia. Covers end-to-end freight operations: shipment and consolidation management, AR/AP billing, electronic documents, HBL/AWB print templates, multi-tenant SSO, and full audit logging.",
+    "links": [],
+    "meta": {
+      "role": "Full-Stack Developer (Sole Developer)",
+      "company": "PT Logimark Forwarding Indonesia",
+      "period": "November 2025 — Present",
+      "startDate": "November 2025",
+      "endDate": "Present",
+      "team": "Solo",
+      "location": "Jakarta, Indonesia",
+      "tech": ["Angular", "TypeScript", "Bun", "Express", "PostgreSQL"],
+      "tools": ["tRPC", "Prisma", "PrimeNG", "TanStack Query", "Better Auth", "Docker", "Nginx", "CI/CD"]
+    },
+    "sections": [
+      {
+        "title": "Context",
+        "paragraphs": [
+          "PT Logimark Forwarding Indonesia is part of the Logimark Group — 24 offices across 12 countries in Asia. The group currently runs CargoWise as their core operations system at significant licensing cost (~$9,000/month for the Indonesia branch alone).",
+          "LogiXpair is being built to replace it, with a phased rollout: first Logimark Indonesia, then the wider Logimark Group, then as a commercial SaaS product open to the broader freight forwarding market."
+        ]
+      },
+      {
+        "title": "Scope & Modules",
+        "bullets": [
+          "SSO System: multi-tenant authentication, user management, encrypted credentials, JWT/JWKS, HTTP-only cookie sessions.",
+          "Master Data & References: locations, shipment modes, carrier data, and system-wide reference tables.",
+          "Cargoflow: booking, shipment, consolidation (consol), and SyncProc modules.",
+          "Registry: shipment and consolidation mode/detail/billing records.",
+          "Billing: AR/AP invoices with cost/sell split, postings, and accrual tracking.",
+          "E-Docs: electronic document management across 6+ entity types.",
+          "Printing: 9 print template variants including HBL, AWB, and Delivery Orders.",
+          "User & Tenant Admin: full tenant lifecycle and user permission management."
+        ]
+      },
+      {
+        "title": "Technical Decisions",
+        "bullets": [
+          "Unified TypeScript ecosystem across all 4 repositories (BE SSO, BE APP, FE SSO, FE APP) — Bun + Express + tRPC + Prisma + Better Auth on the backend; Angular 21 + PrimeNG + TanStack Query + Signals (Zoneless) on the frontend.",
+          "Multi-tenant architecture: 1 shared authentication database with isolated per-tenant application databases and tenant connection pooling (1 cached Prisma client per tenant, 5-retry SSO fallback, idle disconnect).",
+          "tRPC contracts published as private NPM packages for end-to-end type safety across repositories.",
+          "Full audit logging on every mutation.",
+          "CI/CD pipeline: push → build → Docker deploy → health check; backend compiled to a single Bun executable (zero source code exposure); frontend obfuscated and served via Nginx.",
+          "Custom scaffolding tooling that reduced new module development from days to hours.",
+          "Inline Excel-like row-editing components for batch data entry without repetitive modal cycles.",
+          "Fault-tolerant file upload pipeline: temp directory (1–24hr lifecycle) → metadata validation → permanent storage."
+        ]
+      },
+      {
+        "title": "Outcomes",
+        "paragraphs": [
+          "Delivered the platform solo in under 6 months at approximately 3–4x industry average solo developer output",
+          "Engineering a system capable of replacing enterprise-grade CargoWise licensing across a 24-office international group",
+          "Custom scaffolding tooling compresses new module build time from days to hours, sustaining high output velocity throughout active development."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "ppic-pil-ckw",
     "title": "PPIC PIL CKW",
     "images": [
