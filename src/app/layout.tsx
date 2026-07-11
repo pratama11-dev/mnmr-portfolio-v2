@@ -72,12 +72,12 @@ export default function RootLayout({
                   <Link href="/#projects" className="hover:text-foreground">
                     Projects
                   </Link>
-                  <Link href="/#skills" className="hover:text-foreground">
+                  {/* <Link href="/#skills" className="hover:text-foreground">
                     Skills
                   </Link>
                   <Link href="/#certifications" className="hover:text-foreground">
                     Certifications
-                  </Link>
+                  </Link> */}
                   <Link href="/#contact" className="hover:text-foreground">
                     Contact
                   </Link>
