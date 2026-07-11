@@ -16,7 +16,8 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const project = allProjects.find((p) => p?.slug === params?.slug);
+  const project = allProjects.find(
+    async (p) => p?.slug === (await params?.slug));
   return {
     title: project ? `${project?.title} — Project` : "Project",
     description: project?.summary || project?.description,
@@ -33,7 +34,10 @@ function normalizeLinks(links: Project["links"]) {
 }
 
 export default function ProjectDetail({ params }: { params: { slug: string } }) {
-  const project = allProjects.find((p) => p.slug === params.slug);
+  const project = allProjects.find(
+    async (p) => p.slug === (await params).slug
+  );
+
   if (!project) {
     return (
       <main className="mx-auto max-w-6xl px-6 sm:px-8 py-12">

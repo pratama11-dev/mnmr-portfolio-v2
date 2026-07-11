@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Nabil Muyassar Rahman — Portfolio",
+  title: "M.I.N.O.",
   description:
     "Full-stack software developer building TypeScript-first logistics, freight forwarding, PPIC, inventory, and sales platforms.",
 };
@@ -56,7 +56,8 @@ export default function RootLayout({
           <header className="sticky top-0 z-40 w-full border-b border-border/80 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="mx-auto max-w-6xl px-5 sm:px-8 h-14 flex items-center justify-between">
               <Link href="/" className="font-semibold tracking-tight">
-                MNMR
+                {/* MNMR */}
+                MAKIR
               </Link>
               <div className="flex items-center gap-3">
                 {/* Desktop nav */}
@@ -64,10 +65,10 @@ export default function RootLayout({
                   <Link href="/#about" className="hover:text-foreground">
                     About
                   </Link>
-                  <Link href="/#experience" className="hover:text-foreground">
+                  {/* <Link href="/#experience" className="hover:text-foreground">
                     Experience
-                  </Link>
-                  <Link href="/projects" className="hover:text-foreground">
+                  </Link> */}
+                  <Link href="/#projects" className="hover:text-foreground">
                     Projects
                   </Link>
                   <Link href="/#skills" className="hover:text-foreground">
@@ -80,14 +81,14 @@ export default function RootLayout({
                     Contact
                   </Link>
                 </nav>
-                <a
+                {/* <a
                   href="https://drive.google.com/file/d/11LhF-dvd_QRYAKMq8pYxolfORS5cydGk/view?usp=drive_link"
                   target="_blank"
                   rel="noreferrer"
                   className="hidden sm:inline-flex items-center rounded-md border border-border px-2.5 py-1.5 text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
                 >
                   Resume
-                </a>
+                </a> */}
                 <ModeToggle />
                 {/* Mobile nav */}
                 <details className="sm:hidden relative">
@@ -131,14 +132,14 @@ export default function RootLayout({
                     >
                       Contact
                     </Link>
-                    <a
+                    {/* <a
                       href="https://drive.google.com/file/d/11LhF-dvd_QRYAKMq8pYxolfORS5cydGk/view?usp=drive_link"
                       target="_blank"
                       rel="noreferrer"
                       className="mt-1 block rounded px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground"
                     >
                       Resume
-                    </a>
+                    </a> */}
                   </div>
                 </details>
               </div>
@@ -148,8 +149,7 @@ export default function RootLayout({
           <footer className="mt-auto border-t border-border/80">
             <div className="mx-auto max-w-6xl px-5 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
               <p>
-                {new Date().getFullYear()} Muhammad Nabil Muyassar Rahman. All
-                rights reserved.
+                {new Date().getFullYear()} M.I.N.O. All rights reserved.
               </p>
               <Link href="#top" className="hover:no-underline">
                 <Button

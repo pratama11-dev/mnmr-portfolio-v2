@@ -1,7 +1,7 @@
 {
   "summary": [
-    "I am Muhammad Nabil Muyassar Rahman, a full-stack software developer based in Central Jakarta, Indonesia. I build enterprise platforms for logistics, freight forwarding, PPIC, inventory, sales, and digital publishing workflows.",
-    "My recent work focuses on TypeScript-first systems with Bun, Express, tRPC, Prisma, Better Auth, Angular, and PrimeNG. I take ownership from schema design and stack decisions through frontend implementation, deployment, and production maintenance.",
-    "I care about software that reduces operational friction: unified codebases, multi-tenant SSO, audit-ready data flows, Excel-like batch editing, reliable file pipelines, and CI/CD that keeps source code and deployments controlled."
+    "I am Adithya Nuz Pratama Putra, a full-stack software developer based in Central Jakarta, Indonesia. I build Makir (Males Mikir), an ERP platform for project-based businesses — covering CRM, quotation, sales order, purchase order, delivery, invoicing, and project profit monitoring in one connected system.",
+    "Our recent work focuses on TypeScript-first systems that unify CRM, quotation, sales order, purchase order, delivery, and invoicing into a single workflow. We own the process end to end — from schema design and stack decisions through frontend implementation, deployment, and production maintenance.",
+    "We care about software that reduces operational friction: real-time profit tracking per project, controlled multi-termin invoicing, installation scheduling, audit-ready financial data, and workflows that let teams focus on running the business instead of managing paperwork."
   ]
 }
