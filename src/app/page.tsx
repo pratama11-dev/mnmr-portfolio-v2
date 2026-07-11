@@ -2,9 +2,6 @@
 import {
   ArrowRight,
   Database,
-  Github,
-  Linkedin,
-  Mail,
   Network,
   ShieldCheck,
   Terminal,
@@ -159,7 +156,7 @@ export default function Home() {
               Problem
             </span>
             <h2 className="mt-3 max-w-2xl text-3xl font-semibold leading-snug md:text-4xl">
-              When the business grows, but the system doesn't.
+              When the business grows, but the system doesn&apos;t.
             </h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
               Many project-based businesses still run their operations through
@@ -197,7 +194,7 @@ export default function Home() {
               <div className="h-full rounded-2xl border border-border bg-muted/30 p-6 transition-transform hover:-translate-y-1">
                 <h3 className="text-xl font-semibold">Disconnected transactions</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Sales orders, purchase orders, and invoices don't talk to each other.
+                  Sales orders, purchase orders, and invoices don&apos;t talk to each other.
                 </p>
               </div>
             </div>
@@ -205,7 +202,7 @@ export default function Home() {
               <div className="h-full rounded-2xl border border-border bg-muted/30 p-6 transition-transform hover:-translate-y-1">
                 <h3 className="text-xl font-semibold">No visibility into progress</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Project progress and installation schedules live in only a few people's heads.
+                  Project progress and installation schedules live in only a few people&apos;s heads.
                 </p>
               </div>
             </div>
@@ -213,7 +210,7 @@ export default function Home() {
               <div className="h-full rounded-2xl border border-border bg-muted/30 p-6 transition-transform hover:-translate-y-1">
                 <h3 className="text-xl font-semibold">Profit discovered too late</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Project profitability is only known after the project ends, not while it's running.
+                  Project profitability is only known after the project ends, not while it&apos;s running.
                 </p>
               </div>
             </div>
@@ -267,7 +264,7 @@ export default function Home() {
                   <h3 className="mt-4 text-xl font-semibold">Real-time profit per project</h3>
                   <p className="mt-2 leading-relaxed text-muted-foreground">
                     Track profit and loss as the project runs, instead of waiting
-                    until it's finished.
+                    until it&apos;s finished.
                   </p>
                 </div>
               </div>
@@ -388,7 +385,7 @@ export default function Home() {
                     "Quotations built manually, prone to miscalculation",
                     "Sales orders and purchase orders disconnected from each other",
                     "Invoices and payment terms hard to track, billing often late",
-                    "Project progress and installation schedules only live in the team's memory",
+                    "Project progress and installation schedules only live in the team&apos;s memory",
                     "Project profit only known after the project is finished",
                     "Financial reports rebuilt manually every month",
                   ].map((item) => (
