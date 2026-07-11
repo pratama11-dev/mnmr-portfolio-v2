@@ -6,6 +6,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
+import { TransitionProvider } from "@/context/TransitionContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -145,7 +146,11 @@ export default function RootLayout({
               </div>
             </div>
           </header>
-          <main>{children}</main>
+          <main>
+            <TransitionProvider>
+              {children}
+            </TransitionProvider>
+          </main>
           <footer className="mt-auto border-t border-border/80">
             <div className="mx-auto max-w-6xl px-5 sm:px-8 py-8 text-sm text-muted-foreground flex items-center justify-between">
               <p>

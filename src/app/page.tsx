@@ -1,3 +1,4 @@
+"use client";
 import {
   ArrowRight,
   Database,
@@ -11,23 +12,12 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import projects from "@/data/projects.json";
-import skills from "@/data/skills.json";
 import about from "@/data/about.json";
-import educationData from "@/data/education.json";
-import experienceData from "@/data/experience.json";
 import { ProjectCard } from "@/components/project-card";
-import { SkillsGrid } from "@/components/skills-grid";
-import { CertificationsList } from "@/components/certifications-list";
 import { Summary } from "@/components/summary";
-import { EducationList } from "@/components/education-list";
-import { WorkExperienceList } from "@/components/work-experience-list";
-import certs from "@/data/certifications.json";
-import type { Project, Certification, Education, Experience } from "@/types";
+import type { Project } from "@/types";
 
 const allProjects = projects?.sort((a, b) => new Date(b?.meta?.startDate ?? "").getTime() - new Date(a?.meta?.startDate ?? "").getTime()) as Project[];
-const certifications = certs as Certification[];
-const education = educationData as Education[];
-const experiences = experienceData as Experience[];
 
 const operatingFocus = [
   {
@@ -53,7 +43,7 @@ const operatingFocus = [
 export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-18">
-      <section className="relative left-1/2 -mx-[50vw] w-screen overflow-hidden border-y border-border py-14 sm:py-20">
+      <section className="description panel light relative left-1/2 -mx-[50vw] w-screen overflow-hidden border-y border-border py-14 sm:py-20">
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--grid-line)_1px,transparent_1px),linear-gradient(180deg,var(--grid-line)_1px,transparent_1px)] bg-[size:42px_42px] [mask-image:linear-gradient(90deg,transparent,black_10%,black_86%,transparent),linear-gradient(180deg,transparent,black_12%,black_92%,transparent)] [mask-composite:intersect]" />
         <div className="absolute right-[10vw] top-8 -z-10 hidden h-72 w-72 rounded-full bg-[color:var(--signal)]/12 blur-3xl sm:block" />
         <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-end">
@@ -119,7 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-12 grid gap-4 md:grid-cols-3">
+      <section className="panel mt-12 grid gap-4 md:grid-cols-3">
         {operatingFocus.map(({ title, description, icon: Icon }) => (
           <article key={title} className="border border-border bg-card p-5">
             <div className="flex size-10 items-center justify-center border border-border bg-background text-[color:var(--signal)]">
@@ -132,7 +122,7 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-4xl">
-        <section id="about" className="mt-20 sm:mt-28">
+        <section id="about" className="panel mt-20 sm:mt-28">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">About</p>
           <h2 className="mt-2 text-3xl font-black tracking-tight">
             Business systems, built end to end
@@ -155,7 +145,7 @@ export default function Home() {
           <SkillsGrid skills={skills} />
         </section> */}
 
-        <section id="projects" className="mt-16 sm:mt-20">
+        <section id="projects" className="panel mt-16 sm:mt-20">
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Projects</p>
@@ -196,7 +186,7 @@ export default function Home() {
           <CertificationsList items={certifications?.sort((a, b) => new Date(b?.issueDate ?? "").getTime() - new Date(a?.issueDate ?? "").getTime()).slice(0, 3)} />
         </section> */}
 
-        <section className="py-24 sm:py-32">
+        <section className="panel py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-base/7 font-semibold text-primary">
