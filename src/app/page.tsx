@@ -73,18 +73,6 @@ export default function Home() {
                 <a href="#contact">Contact Me</a>
               </Button>
             </div>
-
-            {/* <div className="mt-8 flex items-center gap-4 text-muted-foreground">
-              <a href="https://github.com/TapZe" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors" aria-label="GitHub">
-                <Github className="size-5" />
-              </a>
-              <a href="https://www.linkedin.com/in/adithya-nuz-pratama-putra" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors" aria-label="LinkedIn">
-                <Linkedin className="size-5" />
-              </a>
-              <a href="#contact" className="hover:text-foreground transition-colors" aria-label="Email">
-                <Mail className="size-5" />
-              </a>
-            </div> */}
           </div>
 
           <aside className="border border-border bg-card/90 p-5 shadow-sm backdrop-blur">

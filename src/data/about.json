@@ -1,6 +1,6 @@
 {
   "summary": [
-    "I am Adithya Nuz Pratama Putra, a full-stack software developer based in Central Jakarta, Indonesia. I build Makir (Males Mikir), an ERP platform for project-based businesses — covering CRM, quotation, sales order, purchase order, delivery, invoicing, and project profit monitoring in one connected system.",
+    "Makir (Males Mikir) is an ERP platform built for project-based businesses — from sales and procurement to project execution and finance. We built Makir to replace scattered spreadsheets and manual tracking with one connected system.",
     "Our recent work focuses on TypeScript-first systems that unify CRM, quotation, sales order, purchase order, delivery, and invoicing into a single workflow. We own the process end to end — from schema design and stack decisions through frontend implementation, deployment, and production maintenance.",
     "We care about software that reduces operational friction: real-time profit tracking per project, controlled multi-termin invoicing, installation scheduling, audit-ready financial data, and workflows that let teams focus on running the business instead of managing paperwork."
   ]
