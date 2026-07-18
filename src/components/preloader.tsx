@@ -56,11 +56,14 @@ export function Preloader() {
       ref={container}
       className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-4 bg-background invisible"
     >
-      <p className="preloader-mark text-2xl font-black tracking-tight">
-        M.I.N.O.
-      </p>
+      <div className="preloader-mark text-center">
+        <p className="text-3xl font-black tracking-[0.3em]">MAKIR</p>
+        <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
+          by M.I.N.O
+        </p>
+      </div>
       <div className="preloader-bar h-px w-40 overflow-hidden bg-border">
-        <div className="preloader-bar-fill h-full w-full origin-left scale-x-0 bg-[color:var(--signal)]" />
+        <div className="preloader-bar-fill h-full w-full origin-left scale-x-0 bg-signal" />
       </div>
     </div>
   );
