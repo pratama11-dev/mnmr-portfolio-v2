@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MAKIR by M.I.N.O — Marketing Site
 
-## Getting Started
+Gamified single-page marketing site for MAKIR, a modular ERP built from the client's
+actual business process. The page is a playable journey: diagnose operational chaos,
+repair the broken pipeline, assemble your own module plan — an Operational Health HUD
+tracks progress to 100% ("SYSTEM ONLINE").
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router, Turbopack) · React 19 · TypeScript
+- Tailwind CSS 4 + tw-animate-css
+- GSAP + ScrollTrigger for scroll choreography
+- Bilingual EN/ID via a typed client-side dictionary (no route-based i18n)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun dev        # http://localhost:3000
+bun run build  # production build (type-checks + lints)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/content/` — typed copy dictionaries (`en.ts`, `id.ts`), module/estimator data (`modules.ts`)
+- `src/context/` — `LocaleContext` (EN/ID, persisted to localStorage), `GameContext` (journey state, derived health score)
+- `src/components/sections/` — journey stages in page order: hero → chaos → barriers → principles → builder → method → comparison → vision → offer → contact
+- `src/components/` — HUD, stage rail, ticker, header/footer, toggles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The scope estimator in the builder outputs indicative mandays/months only — no pricing.
+Effort figures live in `src/content/modules.ts`.
